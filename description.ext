@@ -1,0 +1,73 @@
+respawn = "BASE";  
+respawndelay = 5;  // this is time from death to new life  
+
+author="SLI";
+OnLoadName = "Killhouse";
+OnLoadMission = "";
+enableDebugConsole = 0;
+onLoadIntroTime = 0;
+
+overviewPicture = "loadScreen.paa";
+
+loadScreen = "loadScreen.paa";
+
+disabledAI = 1;
+//disableChannels[] = {0,1,2,3,6};
+
+#include "vas\menu.hpp"
+#include "osd\healthStatusbar.hpp"
+
+class Header
+{
+	gameType = SANDBOX; // Game type, see 'class' columns in the table below
+	minPlayers = 1; //min # of players the mission supports
+	maxPlayers = 20; //max # of players the mission supports
+};
+
+
+class CfgFunctions
+{
+	#include "vas\cfgfunctions.hpp"
+};
+
+class CfgSounds
+{	
+	sounds[] = {beep, dblbeep, arm, disarm, alarm};
+
+	class beep
+	{
+		name = "beep"; // Name for mission editor
+		sound[] = {\audio\beep.ogg, 1.0, 1.0};
+		titles[] = {};
+	};
+
+	class dblbeep
+	{
+		name = "dblbeep"; // Name for mission editor
+		sound[] = {\audio\dblbeep.ogg, 1.0, 1.0};
+		titles[] = {};
+	};
+
+	class arm
+	{
+		name = "arm"; // Name for mission editor
+		sound[] = {\audio\arm.ogg, 1.0, 1.0};
+		titles[] = {};
+	};
+
+	class disarm
+	{
+		name = "disarm"; // Name for mission editor
+		sound[] = {\audio\disarm.ogg, 1.0, 1.0};
+		titles[] = {};
+	};
+
+	class alarm
+	{
+		name = "alarm"; // Name for mission editor
+		sound[] = {\audio\alarm.ogg, 1.0, 1.0};
+		titles[] = {};
+	};
+
+};
+
